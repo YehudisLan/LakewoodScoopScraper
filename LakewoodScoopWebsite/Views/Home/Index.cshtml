@@ -1,0 +1,26 @@
+﻿@using LakewoodScoopWebsiteScraper.API;
+@using LakewoodScoopWebsite;
+@model IEnumerable<NewsStory>
+    <div class="container">
+        @foreach (NewsStory s in Model)
+        {
+            <div class="post">
+                <h2><a href="@s.Url">@s.Title</a></h2>
+                <p>
+                    <a class="fancybox">
+                        <img class="aligncenter size-large alignleft size-full" src="@s.Img" alt-width="189" height="165" sizes="(max-width: 500px;)100vw, 500px;"/>
+                    </a>
+                    @s.Subscript
+                </p>
+             </div>
+             <div align="center" style="margin-bottom:10px;">
+                 <div class="g g-11">
+                     <br />
+                     <br />
+                     <div class="g-single a-54"></div>
+                 </div>
+             </div>
+
+        }
+       
+    </div>
